@@ -1,0 +1,33 @@
+/*ranger*/
+*{
+  margin:0;padding:0;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none; 
+  user-select:none;
+}
+.ranger{
+	margin-top: 36px;
+	position: relative;
+	height: 4px;
+	background-color:#dbdbdb;
+}
+.dragger{
+	position: absolute;
+	top:-20px;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	border: 2px solid #1AB8C7;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.13);
+	cursor: move;
+	-webkit-touch-callout: none;
+	border-radius: 100%;
+	z-index: 4;
+}
+.process{
+	position: absolute;
+	display: inline-block;
+	width: 90%;
+	height: 4px;
+	background-color: #1AB8C7;
+}

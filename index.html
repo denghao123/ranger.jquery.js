@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>ranger.jquery.js--拖动选值插件演示</title>
+	<link rel="stylesheet" href="ranger.css">
+	<style>
+		.main {
+			margin: 30px;
+		}
+
+		.res {
+			height: 100px;
+			text-align: center;
+			font-size: 16px;
+			margin-top: 30px;
+		}
+
+		.res p {
+			color: blue;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="main">
+		<div>
+			<a href="https://denghao.me">《返回首页</a>
+		</div>
+		<h2>ranger.jquery.js --拖动选值插件</h2>
+
+		<div id="box1"></div>
+		<div class="res">
+			<p>范围：0-100</p>
+			<span class="res1">拖动：0-100</span>
+		</div>
+
+		<div id="box2"></div>
+		<div class="res">
+			<p>范围：100-500</p>
+			<span class="res2">拖动：100-500</span>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+	<script src="./ranger.jquery.js"></script>
+	<script>
+		$(function () {
+
+			$("#box1").Ranger({
+				from: 0,
+				to: 100,
+				min: 0,
+				max: 100,
+				onDrag: function (res) {
+					$(".res1").text('拖动：' + res.from + "-" + res.to);
+				}
+			})
+
+			$("#box2").Ranger({
+				from: 200,
+				to: 300,
+				min: 100,
+				max: 500,
+				onDrag: function (res) {
+					$(".res2").text('拖动：' + res.from + "-" + res.to);
+				}
+			})
+
+		})
+	</script>
+</body>
+
+</html>
